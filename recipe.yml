@@ -1,0 +1,44 @@
+name: 'Automated Testing Kit - Demonstration'
+description: 'Set up Automated Testing Kit for demonstration on a new Drupal installation.'
+# The type key is similar to the package key in module.info.yml. It
+# can be used by the UI to group Drupal recipes. Additionally,
+# the type 'Site' means that the Drupal recipe will be listed in
+# the installer.
+type: 'Site'
+
+# An array of recipe's to apply prior to applying this recipe. If any of these
+# recipes fail to be applied, this recipe will not be applied either.
+#
+#recipes:
+
+install:
+  # An array of modules or themes to install, if they are not already.
+  # The system will detect if it is a theme or a module. During the
+  # install only simple configuration from the new modules is created.
+  # This allows the Drupal recipe control over the configuration.
+  - automated_testing_kit
+
+  # A Drupal recipe can have a config directory. All configuration
+  # is this directory will be imported after the modules have been
+  # installed.
+  # Additionally, the Drupal recipe can install configuration entities
+  # provided by the modules it configures. This allows them to not have
+  # to maintain or copy this configuration.
+  #
+  # config:
+
+  # import:
+
+  # Configuration actions may be defined. The structure here should be
+  # configuration entity ID, action, and then action arguments. Below the user
+  # role entity type with an ID of editor is being created if it does not exist
+  # and then has permissions added. The permissions key will be mapped to the
+  # \Drupal\user\Entity\Role::grantPermission() method.
+  #
+
+  # actions:
+
+# A Drupal recipe can have a content directory. All content in this
+# directory will be created after the configuration is installed.
+#
+# content:
