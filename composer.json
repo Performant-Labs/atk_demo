@@ -1,0 +1,28 @@
+{
+  "name": "performant-labs/atk_demo",
+  "description": "Create a standalone Drupal demonstration site with Automated Testing Kit.",
+  "keywords": ["recipe", "Automated Testing Kit", "demonstration"],
+  "type": "drupal-recipe",
+  "authors": [
+    {
+      "name": "André Angelantoni",
+      "homepage": "https://performantlabs.com",
+      "role": "Maintainer"
+    }
+  ],
+  "require": {
+    "drupal/core": "^10",
+    "drupal/automated_testing_kit": "^1.0",
+    "drupal/default_content": "^2.0@alpha",
+    "drupal/xmlsitemap": "^1.5",
+    "drupal/gin": "^3.0",
+    "drupal/gin_login": "^2.0",
+    "drupal/gin_toolbar": "^1.0",
+    "drupal/pathauto": "^1.0"
+    "drupal/qa_accounts": "^1.0"
+    "drupal/symfony_mailer": "^1.4",
+    "drupal/webform": "^6.2"
+  },
+  "suggest": {},
+  "license": "GPL-2.0-or-later"
+}
