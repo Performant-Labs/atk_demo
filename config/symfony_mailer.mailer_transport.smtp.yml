@@ -1,0 +1,18 @@
+uuid: 221ce791-3409-40b3-ac1a-17ccca8c5045
+langcode: en
+status: true
+dependencies: {  }
+id: smtp
+label: SMTP
+plugin: smtp
+configuration:
+  user: ' jayda.kozey@ethereal.email'
+  pass: ManbQBMZ5ERXPWbQ2Y
+  host: smtp.ethereal.email
+  port: 587
+  query:
+    verify_peer: true
+    local_domain: ''
+    restart_threshold: null
+    restart_threshold_sleep: null
+    ping_threshold: null
