@@ -12,17 +12,15 @@
   ],
   "require": {
     "drupal/core": "^10",
+    "drupal/admin_toolbar": "^3.4",
+    "drupal/admin_toolbar_tools": "^3.4",
     "drupal/automated_testing_kit": "^1.0",
     "drupal/default_content": "^2.0@alpha",
-    "drush/drush": "^12.4",
-    "drupal/xmlsitemap": "^1.5",
-    "drupal/gin": "^3.0",
-    "drupal/gin_login": "^2.0",
-    "drupal/gin_toolbar": "^1.0",
     "drupal/pathauto": "^1.0",
-    "drupal/qa_accounts": "^1.0",
+    "drupal/redirect": "^1.9",
     "drupal/symfony_mailer": "^1.4",
-    "drupal/webform": "^6.2"
+    "drupal/token": "^1.13",
+    "drupal/xmlsitemap": "^1.5"
   },
   "suggest": {},
   "license": "GPL-2.0-or-later"
