@@ -1,4 +1,4 @@
-## Automated Testing Kit Demoonstration Recipe
+## Automated Testing Kit Demonstration Recipe
 Create a demonstration Drupal site with Automated Testing Kit (ATK) for demonstration purposes.
 
 This recipe is designed to:
