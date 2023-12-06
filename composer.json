@@ -10,7 +10,14 @@
       "role": "Maintainer"
     }
   ],
-  "require": {
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/Performant-Labs/atk_demo_support"
+    }
+],
+"minimum-stability": "dev",
+"require": {
     "drupal/core": "^10",
     "drupal/admin_toolbar": "^3.4",
     "drupal/admin_toolbar_tools": "^3.4",
