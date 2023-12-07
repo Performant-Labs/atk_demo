@@ -1,4 +1,4 @@
-name: 'Automated Testing Kit - Demonstration Recipe Extraordinaire'
+name: 'Automated Testing Kit - Demonstration Recipe'
 description: 'Set up Automated Testing Kit for demonstration on a new Drupal installation.'
 # The type key is similar to the package key in module.info.yml. It
 # can be used by the UI to group Drupal recipes. Additionally,
