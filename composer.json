@@ -31,7 +31,9 @@
     "drupal/redirect": "^1.9",
     "drupal/symfony_mailer": "^1.4",
     "drupal/token": "^1.13",
-    "drupal/xmlsitemap": "^1.5"
+    "drupal/webform": "^6.2",
+    "drupal/xmlsitemap": "^1.5",
+    "performant-labs/atk_demo_support": "dev-main"
   },
   "suggest": {},
   "license": "GPL-2.0-or-later"

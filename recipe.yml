@@ -6,10 +6,13 @@ description: 'Set up Automated Testing Kit for demonstration on a new Drupal ins
 # the installer.
 type: 'Site'
 
-# An array of recipe's to apply prior to applying this recipe. If any of these
-# recipes fail to be applied, this recipe will not be applied either.
+# An array of recipes to apply prior to applying this recipe. If any of these
+# recipes fail to apply, this recipe will not be applied either.
 #
-#recipes:
+recipes:
+  # Adds Gin as the admin theme.
+  # https://github.com/kanopi/gin-admin-experience/blob/main/recipe.yml
+  - gin-admin-experience
 
 install:
   # An array of modules or themes to install, if they are not already.
@@ -18,22 +21,7 @@ install:
   # This allows the Drupal recipe control over the configuration.
 
   # Install core dependencies.
-  - config
-  - help
   - node
-
-  # Use Claro for the front end (it's also a dependency of Gin) but don't import config.
-  - claro
-
-  # Install Toolbar as it is a dependency of Gin Toolbar.
-  - toolbar
-
-  # Change admin theme to Gin and improve toolbar functionality.
-  - admin_toolbar
-  - admin_toolbar_tools
-  - gin
-  - gin_login
-  - gin_toolbar
 
   # Install Automated Testing Kit, the demo support module and their dependencies.
   - automated_testing_kit
@@ -53,24 +41,8 @@ install:
   # provided by the modules it configures. This allows them to not have
   # to maintain or copy this configuration.
   #
-  config:
-    import:
-      # Import all of Admin Toolbar's modules config.
-      admin_toolbar: '*'
-      admin_toolbar_search: '*'
-      admin_toolbar_tools: '*'
-      # Import all of Gin and Gin Login's config.
-      # Gin Toolbar does not have any config.
-      gin:
-        - gin.settings
-        - block.block.gin_breadcrumbs
-        - block.block.gin_content
-        - block.block.gin_help
-        - block.block.gin_local_actions
-        - block.block.gin_messages
-        - block.block.gin_page_title
-        - block.block.gin_primary_local_tasks
-      gin_login: '*'
+  # config:
+  #  import:
 
   # Configuration actions may be defined. The structure here should be
   # configuration entity ID, action, and then action arguments. Below the user
@@ -78,39 +50,7 @@ install:
   # and then has permissions added. The permissions key will be mapped to the
   # \Drupal\user\Entity\Role::grantPermission() method.
   #
-    actions:
-  #    block.block.gin_admin:
-  #      simple_config_update:
-  #        status: false
-  #    block.block.gin_branding:
-  #      simple_config_update:
-  #        status: false
-  #    block.block.gin_local_actions:
-  #      simple_config_update:
-  #        region: content
-  #        weight: -10
-  #    block.block.gin_local_tasks:
-  #      simple_config_update:
-  #        status: false
-  #    block.block.gin_page_title:
-  #      simple_config_update:
-  #        region: header
-  #        weight: -10
-  #    block.block.gin_primary_local_tasks:
-  #      simple_config_update:
-  #        region: header
-  #        weight: -5
-  #    block.block.gin_tools:
-  #      simple_config_update:
-  #        status: false
-
-      # Update the admin theme to Gin in Theme settings.
-      node.settings:
-        simple_config_update:
-          use_admin_theme: true
-      system.theme:
-        simple_config_update:
-          admin: gin
+  #  actions:
 
 
 # A Drupal recipe can have a content directory. All content in this
