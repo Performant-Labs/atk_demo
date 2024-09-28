@@ -1,8 +1,8 @@
 ## Automated Testing Kit Demonstration Recipe
-Create a demonstration Drupal site with Automated Testing Kit (ATK) for demonstration purposes.
+Create a Drupal site with Automated Testing Kit (ATK) for demonstration purposes.
 
-This recipe is designed to:
-- Add Automated Testing Kit to a fresh Drupal 10+ installation.
+This recipe will:
+- Install Automated Testing Kit into a fresh Drupal 10.3 (or higher) or Drupal 11 installation.
 - Add and configure modules that allow each test to operate (see documentation). 
 - Add the Gin theme.
 
@@ -12,58 +12,42 @@ https://performantlabs.com/automated-testing-kit/automated-testing-kit
 
 ## Installation Instructions
 
-- Start with a fresh Drupal 10+ site (recipes are not guaranteed to work on existing sites):
+- Start with a fresh Drupal 10.3 (or higher) or Drupal 11 site (recipes are not
+  guaranteed to work on existing sites):
 ```
 composer create-project drupal/recommended-project your_new_site
 ```
-- Install the 'Standard' profile using the website UI.
-- Allow composer.json to recognize recipes:
-```  
-  "installer-types": ["drupal-recipe"],
-  "installer-paths": {
-     // Existing entries are here.
-     "web/recipes/contrib/{$name}": [
-       "type:drupal-recipe"
-     ]
-  }
+- Add Drush:
 ```
-- Add the recipte patch to composer.json so that Drupal can work with recipes (this will 
-  eentually be in core):
+composer require drush/drush
 ```
-  "patches": {
-    "drupal/core": {
-      "Allow recipes to be applied":"https://git.drupalcode.org/project/distributions_recipes/-/raw/patch/recipe.patch"
-    }
-  }
+- Install the Standard profile using the website UI or with:
 ```
-- Allow composer.json to recognize the Github repo with the recipe:
+drush site:install --account-name=admin --account-pass=password -y
+```
+- Allow composer.json to recognize the Github repo with this recipe:
 ```
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/perfomant-labs/atk_demo"
+      "url": "https://github.com/performant-labs/atk_standalone"
     }
-  ]
+  }
 ```
-- Add the recipe to your site:
+- Add the recipe to your site (it will appear in <project_root>/recipes at
+  the same level as web):
 ```
-composer require performant-labs/atk_demo
+composer require performant-labs/atk_standalone
 ```
-- Update dependencies:
-```
-composer update
-```
-
 - Apply the recipe. Note that `core/scripts/drupal` must be
 executable with `chmod +x`.
 
 ```shell
-php core/scripts/drupal recipe recipes/contrib/atk_demo
+php core/scripts/drupal recipe ../recipes/atk_demo
 ```
-
 You should see:
 ```
 [OK] Automated Testing Kit - Demonstration applied successfully
 ```
-Clear the cache (`drush cr` or use the UI) and visit the site. See
+Clear the cache (`drush cr`) and visit the site. See
 the documentation for instructions on running Cypress or Playwright tests.
