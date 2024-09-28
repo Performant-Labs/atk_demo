@@ -34,13 +34,17 @@ drush site:install --account-name=admin --account-pass=password -y
     }
   }
 ```
+- Change project stability in composer.json to "dev".
 - Add the recipe to your site (it will appear in <project_root>/recipes at
   the same level as web):
 ```
 composer require performant-labs/atk_standalone
 ```
-- Apply the recipe. Note that `core/scripts/drupal` must be
-executable with `chmod +x`.
+- Get Drupal to see the new modules:
+```
+ddev drush cr
+```
+- Apply the recipe. If using DDEV, Lando or Docksal, do this within the appserver container.
 
 ```shell
 php core/scripts/drupal recipe ../recipes/atk_demo
@@ -49,5 +53,4 @@ You should see:
 ```
 [OK] Automated Testing Kit - Demonstration applied successfully
 ```
-Clear the cache (`drush cr`) and visit the site. See
-the documentation for instructions on running Cypress or Playwright tests.
+Visit the site. See the ATK documentation for instructions on running Cypress or Playwright tests.
