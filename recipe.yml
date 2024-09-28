@@ -12,7 +12,7 @@ type: 'Site'
 recipes:
   # Adds Gin as the admin theme.
   # https://github.com/kanopi/gin-admin-experience/blob/main/recipe.yml
-  # - gin-admin-experience
+  - kanopi/gin-admin-experience
 
 install:
   # An array of modules or themes to install, if they are not already.
