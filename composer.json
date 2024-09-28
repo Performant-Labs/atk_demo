@@ -22,9 +22,6 @@
     "drupal/admin_toolbar": "^3.4",
     "drupal/admin_toolbar_tools": "^3.4",
     "drupal/automated_testing_kit": "^1.2",
-    "drupal/gin": "^3.0",
-    "drupal/gin_login": "^2.0",
-    "drupal/gin_toolbar": "^1.0",
     "drupal/pathauto": "^1.0",
     "drupal/qa_accounts": "^1.0",
     "drupal/redirect": "^1.9",
@@ -32,7 +29,8 @@
     "drupal/token": "^1.13",
     "drupal/webform": "^6.2",
     "drupal/xmlsitemap": "^1.5",
-    "drush/drush": "^13"
+    "drush/drush": "^13",
+    "kanopi/gin-admin-experience": "^1.0@beta"
   },
   "suggest": {},
   "license": "GPL-2.0-or-later"
