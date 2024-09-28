@@ -3,8 +3,8 @@ Create a Drupal site with Automated Testing Kit (ATK) for demonstration purposes
 
 This recipe will:
 - Install Automated Testing Kit into a fresh Drupal 10.3 (or higher) or Drupal 11 installation.
-- Add and configure modules that allow each test to operate (see documentation). 
-- Add the Gin theme.
+- Install and configure modules that allow each test to operate (see documentation). 
+- Install the Gin theme by calling the kanopi/gin-admin-experience recipe.
 
 ## Documentation
 
