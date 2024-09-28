@@ -18,11 +18,10 @@
 ],
 "minimum-stability": "dev",
 "require": {
-    "drupal/core": "^10",
+    "drupal/core": "^10.3",
     "drupal/admin_toolbar": "^3.4",
     "drupal/admin_toolbar_tools": "^3.4",
-    "drupal/automated_testing_kit": "^1.0",
-    "drupal/default_content": "^2.0@alpha",
+    "drupal/automated_testing_kit": "^1.2",
     "drupal/gin": "^3.0",
     "drupal/gin_login": "^2.0",
     "drupal/gin_toolbar": "^1.0",
@@ -33,8 +32,7 @@
     "drupal/token": "^1.13",
     "drupal/webform": "^6.2",
     "drupal/xmlsitemap": "^1.5",
-    "drush/drush": "^12",
-    "performant-labs/atk_demo_support": "dev-main"
+    "drush/drush": "^13"
   },
   "suggest": {},
   "license": "GPL-2.0-or-later"
