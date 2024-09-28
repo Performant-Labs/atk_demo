@@ -25,7 +25,6 @@ install:
 
   # Install Automated Testing Kit, the demo support module and their dependencies.
   - automated_testing_kit
-  - atk_demo_support
   - pathauto
   - qa_accounts
   - redirect
