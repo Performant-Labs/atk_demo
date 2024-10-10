@@ -32,7 +32,7 @@ drush site:install --account-name=admin --account-pass=password -y
       "type": "vcs",
       "url": "https://github.com/performant-labs/atk_standalone"
     }
-  }
+  ]
 ```
 - Change project stability in composer.json to "dev".
 - Add the recipe to your site (it will appear in <project_root>/recipes at
